@@ -1,60 +1,73 @@
-# customer-churn-intelligence
-AI-powered Customer Churn Analysis and Prediction Dashboard
-A data-driven dashboard for exploring customer churn patterns, understanding customer behaviour, and supporting retention decisions.
+# Customer Churn Intelligence
+
+### AI-Powered Customer Churn Analysis & Prediction Platform
+
+An interactive analytics platform designed to identify customer churn patterns, evaluate customer risk, understand revenue impact, and support data-driven customer retention strategies.
+
+**Live Dashboard:** [Explore Customer Churn Intelligence](https://customer-churn-intelligence-krgktgmskaccokzjwa5wuz.streamlit.app/)
 
 ## Project Overview
 
-Customer churn is an important challenge for subscription-based businesses. This project analyses customer data to identify churn patterns and presents key findings through an interactive dashboard.
-
-The goal is to turn raw customer data into meaningful insights that can help businesses understand why customers leave and where retention efforts may be needed.
+Customer churn is a critical challenge for subscription-based businesses. This project uses data analytics and machine learning to explore customer behaviour, identify potential churn risks, and generate actionable business insights through an interactive dashboard.
 
 ## Key Features
 
-- Customer churn analysis and key performance indicators
-- Interactive visualisations for exploring customer segments
-- Analysis of contract types, tenure, and service usage
-- Customer churn prediction using a machine learning model
-- Data-backed insights to support retention strategies
+- **Executive Overview:** High-level business performance and churn metrics.
+- **Customer 360 Intelligence:** Detailed customer-level insights.
+- **Customer Risk Matrix:** Identification of high-risk customer segments.
+- **Explainable AI (XAI):** Understanding the factors influencing predictions.
+- **What-If Simulator:** Interactive customer scenario analysis.
+- **Customer Analytics:** Exploration of customer behaviour and trends.
+- **Churn Analysis & Drivers:** Analysis of key churn indicators.
+- **Revenue Intelligence:** Insights into revenue and financial impact.
+- **Retention Insights:** Data-driven customer retention opportunities.
+- **ML Model Performance:** Evaluation of machine learning performance.
+- **Customer Data Explorer:** Interactive customer data exploration.
+- **Data Quality & SQL Inspector:** Data validation and SQL-based analysis.
 
 ## Technology Stack
 
-- Python
-- Streamlit
-- Pandas
-- NumPy
-- Plotly
-- Scikit-learn
-- SQLite
+| Category | Technologies |
+|---|---|
+| Programming | Python |
+| Dashboard | Streamlit |
+| Data Analysis | Pandas, NumPy |
+| Visualization | Plotly |
+| Machine Learning | Scikit-learn |
+| Model Persistence | Joblib |
+| Version Control | Git & GitHub |
 
-## Dataset
+## Project Structure
 
-The project uses a Telco Customer Churn dataset containing customer information, subscribed services, account details, and churn status.
-
-## Running the Project
-
-Clone the repository:
-
-```bash
-git clone https://github.com/apoo8029/customer-churn-intelligence.git
-cd customer-churn-intelligence
+```text
+customer-churn-intelligence/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+└── screenshots/
 ```
 
-Install dependencies:
+## Business Value
 
-```bash
-pip install -r requirements.txt
-```
+The platform helps businesses:
 
-Run the application:
+- Identify customers who are more likely to churn.
+- Understand the factors associated with customer attrition.
+- Monitor revenue at risk.
+- Explore customer segments and behavioural patterns.
+- Support informed customer retention decisions.
 
-```bash
-streamlit run app.py
-```
+## Deployment
 
-## Project Status
+The application is deployed using Streamlit Community Cloud.
 
-The dashboard is running locally. Deployment and further improvements are in progress.
+**Live Application:** [Customer Churn Intelligence](https://customer-churn-intelligence-krgktgmskaccokzjwa5wuz.streamlit.app/)
 
 ## Author
 
-Developed as an academic project focused on data analysis, machine learning, and interactive application development.
+**Apoorva Srivastava**
+
+MCA | Artificial Intelligence & Machine Learning
+
+[GitHub](https://github.com/apoo8029)
