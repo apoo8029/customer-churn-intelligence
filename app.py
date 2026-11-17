@@ -343,7 +343,7 @@ df = df_global[
 
 
 
-if app_page == "ðŸ“Š Executive Overview":
+if app_page == "Executive Overview":
 
           st.title("Executive Overview Dashboard")
 
@@ -437,7 +437,7 @@ if app_page == "ðŸ“Š Executive Overview":
 
 
 
-elif app_page == "ðŸ” Customer 360Â° Intelligence":
+elif app_page == "Customer 360 Intelligence":
 
           st.title("Customer 360 - Complete Customer Intelligence")
 
@@ -565,7 +565,7 @@ elif app_page == "ðŸ” Customer 360Â° Intelligence":
 
 
 
-elif app_page == "ðŸŽ¯ Customer Risk Matrix":
+elif app_page == "Customer Risk Matrix":
 
           st.title("Advanced Customer Risk Intelligence Matrix")
 
@@ -645,7 +645,7 @@ elif app_page == "ðŸŽ¯ Customer Risk Matrix":
 
 
 
-elif app_page == "ðŸ”¬ Explainable AI (XAI)":
+elif app_page == "Explainable AI (XAI)":
 
           st.title("Explainable AI - Feature Contribution & Risk Analysis")
 
@@ -719,7 +719,7 @@ elif app_page == "ðŸ”¬ Explainable AI (XAI)":
 
 
 
-elif app_page == "ðŸ”® What-If Simulator":
+elif app_page == "What-If Simulator":
 
           st.title("Customer Churn Scenario Simulator (What-If Analysis)")
 
@@ -797,7 +797,7 @@ elif app_page == "ðŸ”® What-If Simulator":
 
 
 
-elif app_page == "ðŸ‘¥ Customer Analytics":
+elif app_page == "Customer Analytics":
 
           st.title("Customer Demographics & Analytics")
 
@@ -829,7 +829,7 @@ elif app_page == "ðŸ‘¥ Customer Analytics":
 
 
 
-elif app_page == "ðŸ“‰ Churn Analysis & Drivers":
+elif app_page == "Churn Analysis & Drivers":
 
           st.title("Churn Analysis & Risk Drivers")
 
@@ -843,7 +843,7 @@ elif app_page == "ðŸ“‰ Churn Analysis & Drivers":
 
 
 
-elif app_page == "ðŸ’° Revenue Intelligence":
+elif app_page == "Revenue Intelligence":
 
           st.title("Revenue Intelligence & Financial Risk")
 
@@ -859,7 +859,7 @@ elif app_page == "ðŸ’° Revenue Intelligence":
 
 
 
-elif app_page == "ðŸ’¡ Retention Insights":
+elif app_page == "Retention Insights":
 
           st.title("Business Retention Intelligence & Recommendations")
 
@@ -869,7 +869,7 @@ elif app_page == "ðŸ’¡ Retention Insights":
 
 
 
-elif app_page == "ðŸ¤– ML Model Performance":
+elif app_page == "ML Model Performance":
 
           st.title("Machine Learning Model Evaluation")
 
@@ -887,7 +887,7 @@ elif app_page == "ðŸ¤– ML Model Performance":
 
 
 
-elif app_page == "ðŸ“ Customer Data Explorer":
+elif app_page == "Customer Data Explorer":
 
           st.title("Customer Explorer & Data Inspector")
 
@@ -909,7 +909,7 @@ elif app_page == "ðŸ“ Customer Data Explorer":
 
 
 
-elif app_page == "âš™ï¸ Data Quality & SQL Inspector":
+elif app_page == "Data Quality & SQL Inspector":
 
           st.title("Data Quality & SQL Query Inspector")
 
@@ -925,7 +925,7 @@ elif app_page == "âš™ï¸ Data Quality & SQL Inspector":
 
 
 
-elif app_page == "â„¹ï¸ About the Project":
+elif app_page == "About the Project":
 
           st.title("About Customer Churn Intelligence")
 
