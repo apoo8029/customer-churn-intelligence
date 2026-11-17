@@ -1,4 +1,4 @@
-import sqlite3
+﻿import sqlite3
 
 import pandas as pd
 
@@ -28,7 +28,7 @@ st.set_page_config(
 
           page_title="Customer Churn Intelligence Platform",
 
-          page_icon="âš¡",
+          page_icon="Ã¢Å¡Â¡",
 
           layout="wide",
 
@@ -256,7 +256,7 @@ if df_global.empty:
 
 # ==========================================
 
-st.sidebar.markdown("### âš¡ Churn Intelligence")
+st.sidebar.markdown("### Churn Intelligence")
 
 st.sidebar.markdown("---")
 
@@ -268,31 +268,31 @@ app_page = st.sidebar.radio(
 
           [
 
-                    "📊 Executive Overview",
+                    "ðŸ“Š Executive Overview",
 
-                    "🔍 Customer 360° Intelligence",
+                    "ðŸ” Customer 360Â° Intelligence",
 
-                    "🎯 Customer Risk Matrix",
+                    "ðŸŽ¯ Customer Risk Matrix",
 
-                    "🔬 Explainable AI (XAI)",
+                    "ðŸ”¬ Explainable AI (XAI)",
 
-                    "🔮 What-If Simulator",
+                    "ðŸ”® What-If Simulator",
 
-                    "👥 Customer Analytics",
+                    "ðŸ‘¥ Customer Analytics",
 
-                    "📉 Churn Analysis & Drivers",
+                    "ðŸ“‰ Churn Analysis & Drivers",
 
-                    "💰 Revenue Intelligence",
+                    "ðŸ’° Revenue Intelligence",
 
-                    "💡 Retention Insights",
+                    "ðŸ’¡ Retention Insights",
 
-                    "🤖 ML Model Performance",
+                    "ðŸ¤– ML Model Performance",
 
-                    "📁 Customer Data Explorer",
+                    "ðŸ“ Customer Data Explorer",
 
-                    "⚙️ Data Quality & SQL Inspector",
+                    "âš™ï¸ Data Quality & SQL Inspector",
 
-                    "ℹ️ About the Project"
+                    "â„¹ï¸ About the Project"
 
           ]
 
@@ -302,7 +302,7 @@ app_page = st.sidebar.radio(
 
 st.sidebar.markdown("---")
 
-st.sidebar.markdown("### 🎛️ Global Data Filters")
+st.sidebar.markdown("### ðŸŽ›ï¸ Global Data Filters")
 
 
 
@@ -362,9 +362,9 @@ df = df_global[
 
 
 
-if app_page == "📊 Executive Overview":
+if app_page == "ðŸ“Š Executive Overview":
 
-          st.title("📊 Executive Overview Dashboard")
+          st.title("ðŸ“Š Executive Overview Dashboard")
 
           st.markdown("Real-time telemetry monitoring customer retention, subscription risk exposure, and billing analytics.")
 
@@ -398,7 +398,7 @@ if app_page == "📊 Executive Overview":
 
           st.markdown("---")
 
-          st.markdown("### 📥 Export Analytics Report")
+          st.markdown("### ðŸ“¥ Export Analytics Report")
 
           export_col1, export_col2 = st.columns([3, 1])
 
@@ -414,7 +414,7 @@ if app_page == "📊 Executive Overview":
 
                     csv_data = df.to_csv(index=False).encode('utf-8')
 
-                    st.download_button("📥 Download Report CSV", data=csv_data, file_name=csv_filename, mime="text/csv", use_container_width=True)
+                    st.download_button("ðŸ“¥ Download Report CSV", data=csv_data, file_name=csv_filename, mime="text/csv", use_container_width=True)
 
 
 
@@ -456,9 +456,9 @@ if app_page == "📊 Executive Overview":
 
 
 
-elif app_page == "🔍 Customer 360° Intelligence":
+elif app_page == "ðŸ” Customer 360Â° Intelligence":
 
-          st.title("🔍 Customer 360° — Complete Customer Intelligence")
+          st.title("ðŸ” Customer 360Â° â€” Complete Customer Intelligence")
 
           st.markdown("Search a specific Customer ID to inspect comprehensive behavioral telemetry, ML risk scoring, and tailored retention recommendations.")
 
@@ -474,7 +474,7 @@ elif app_page == "🔍 Customer 360° Intelligence":
 
                     if cust_match.empty:
 
-                              st.warning("⚠️ No customer found matching this ID. Please verify the Customer ID.")
+                              st.warning("âš ï¸ No customer found matching this ID. Please verify the Customer ID.")
 
                     else:
 
@@ -536,57 +536,57 @@ elif app_page == "🔍 Customer 360° Intelligence":
 
                               with sec1:
 
-                                        st.markdown("### 👤 A. Customer & Service Overview")
+                                        st.markdown("### ðŸ‘¤ A. Customer & Service Overview")
 
-                                        st.write(f"• **Gender:** {cust['gender']}")
+                                        st.write(f"â€¢ **Gender:** {cust['gender']}")
 
-                                        st.write(f"• **Senior Citizen:** {'Yes' if cust['senior_citizen'] == 1 else 'No'}")
+                                        st.write(f"â€¢ **Senior Citizen:** {'Yes' if cust['senior_citizen'] == 1 else 'No'}")
 
-                                        st.write(f"• **Contract Type:** {cust['contract']}")
+                                        st.write(f"â€¢ **Contract Type:** {cust['contract']}")
 
-                                        st.write(f"• **Internet Service:** {cust['internet_service']}")
+                                        st.write(f"â€¢ **Internet Service:** {cust['internet_service']}")
 
 
 
                               with sec2:
 
-                                        st.markdown("### 💳 B. Billing & Usage Telemetry")
+                                        st.markdown("### ðŸ’³ B. Billing & Usage Telemetry")
 
-                                        st.write(f"• **Tenure Duration:** {cust['tenure']} Months")
+                                        st.write(f"â€¢ **Tenure Duration:** {cust['tenure']} Months")
 
-                                        st.write(f"• **Monthly Charges:** ${cust['monthly_charges']:.2f}")
+                                        st.write(f"â€¢ **Monthly Charges:** ${cust['monthly_charges']:.2f}")
 
-                                        st.write(f"• **Total Cumulative Charges:** ${cust['total_charges']:,.2f}")
+                                        st.write(f"â€¢ **Total Cumulative Charges:** ${cust['total_charges']:,.2f}")
 
-                                        st.write(f"• **Payment Method:** {cust['payment_method']}")
+                                        st.write(f"â€¢ **Payment Method:** {cust['payment_method']}")
 
 
 
                               st.markdown("---")
 
-                              st.markdown("### 💡 Recommended Retention Actions")
+                              st.markdown("### ðŸ’¡ Recommended Retention Actions")
 
                               if pred_prob > 0.5 or cust['churn'] == 'Yes':
 
-                                        st.error("⚠️ **High Risk Profile Detected:** Immediate intervention recommended.")
+                                        st.error("âš ï¸ **High Risk Profile Detected:** Immediate intervention recommended.")
 
                                         if cust['contract'] == "Month-to-month":
 
-                                                  st.info("🔹 Offer a 15% discount voucher to migrate from Month-to-Month to a 1-year contract.")
+                                                  st.info("ðŸ”¹ Offer a 15% discount voucher to migrate from Month-to-Month to a 1-year contract.")
 
                               else:
 
-                                        st.success("✅ **Stable Customer Profile:** Low immediate churn probability.")
+                                        st.success("âœ… **Stable Customer Profile:** Low immediate churn probability.")
 
           else:
 
-                    st.info("💡 Tip: Type a customer ID in the search box above to load their complete 360° intelligence profile.")
+                    st.info("ðŸ’¡ Tip: Type a customer ID in the search box above to load their complete 360Â° intelligence profile.")
 
 
 
-elif app_page == "🎯 Customer Risk Matrix":
+elif app_page == "ðŸŽ¯ Customer Risk Matrix":
 
-          st.title("🎯 Advanced Customer Risk Intelligence Matrix")
+          st.title("ðŸŽ¯ Advanced Customer Risk Intelligence Matrix")
 
           matrix_df = df.copy()
 
@@ -636,13 +636,13 @@ elif app_page == "🎯 Customer Risk Matrix":
 
           m1, m2, m3, m4 = st.columns(4)
 
-          m1.metric("🔴 High Risk — High Value", f"{q1:,} Cust")
+          m1.metric("ðŸ”´ High Risk â€” High Value", f"{q1:,} Cust")
 
-          m2.metric("🟠 High Risk — Low Value", f"{q2:,} Cust")
+          m2.metric("ðŸŸ  High Risk â€” Low Value", f"{q2:,} Cust")
 
-          m3.metric("🟢 Low Risk — High Value", f"{q3:,} Cust")
+          m3.metric("ðŸŸ¢ Low Risk â€” High Value", f"{q3:,} Cust")
 
-          m4.metric("🔵 Low Risk — Low Value", f"{q4:,} Cust")
+          m4.metric("ðŸ”µ Low Risk â€” Low Value", f"{q4:,} Cust")
 
 
 
@@ -664,9 +664,9 @@ elif app_page == "🎯 Customer Risk Matrix":
 
 
 
-elif app_page == "🔬 Explainable AI (XAI)":
+elif app_page == "ðŸ”¬ Explainable AI (XAI)":
 
-          st.title("🔬 Explainable AI — Feature Contribution & Risk Analysis")
+          st.title("ðŸ”¬ Explainable AI â€” Feature Contribution & Risk Analysis")
 
           st.markdown("Inspect how the trained Random Forest model weighs feature importance to evaluate customer attrition probability.")
 
@@ -692,7 +692,7 @@ elif app_page == "🔬 Explainable AI (XAI)":
 
 
 
-                    st.markdown("### 🧠 Why This Customer Is at Risk (Local Explanation)")
+                    st.markdown("### ðŸ§  Why This Customer Is at Risk (Local Explanation)")
 
                     xai_id = st.text_input("Enter Customer ID for XAI Breakdown", value="")
 
@@ -714,19 +714,19 @@ elif app_page == "🔬 Explainable AI (XAI)":
 
                                         if c_row['contract'] == "Month-to-month":
 
-                                                  st.error("• **Month-to-Month Contract:** +35% risk contribution (High short-term attrition driver).")
+                                                  st.error("â€¢ **Month-to-Month Contract:** +35% risk contribution (High short-term attrition driver).")
 
                                         if c_row['monthly_charges'] > 80:
 
-                                                  st.warning("• **High Monthly Charges (> $80):** +20% risk contribution (Price sensitivity).")
+                                                  st.warning("â€¢ **High Monthly Charges (> $80):** +20% risk contribution (Price sensitivity).")
 
                                         if c_row['tenure'] < 12:
 
-                                                  st.warning("• **Low Tenure (< 1 Year):** +25% risk contribution (Onboarding vulnerability).")
+                                                  st.warning("â€¢ **Low Tenure (< 1 Year):** +25% risk contribution (Onboarding vulnerability).")
 
                                         if c_row['contract'] == "Two year":
 
-                                                  st.success("• **Two-Year Contract:** -40% risk reduction (Strong loyalty lock-in).")
+                                                  st.success("â€¢ **Two-Year Contract:** -40% risk reduction (Strong loyalty lock-in).")
 
                               else:
 
@@ -738,9 +738,9 @@ elif app_page == "🔬 Explainable AI (XAI)":
 
 
 
-elif app_page == "🔮 What-If Simulator":
+elif app_page == "ðŸ”® What-If Simulator":
 
-          st.title("🔮 Customer Churn Scenario Simulator (What-If Analysis)")
+          st.title("ðŸ”® Customer Churn Scenario Simulator (What-If Analysis)")
 
           st.markdown("Modify customer telemetry parameters to simulate hypothetical retention outcomes without altering source data.")
 
@@ -804,11 +804,11 @@ elif app_page == "🔮 What-If Simulator":
 
                                         if sim_pred == 1:
 
-                                                  st.error("⚠️ This simulated scenario still results in a High Churn Risk profile.")
+                                                  st.error("âš ï¸ This simulated scenario still results in a High Churn Risk profile.")
 
                                         else:
 
-                                                  st.success("✅ This simulated configuration successfully stabilizes the customer into a Low Risk state!")
+                                                  st.success("âœ… This simulated configuration successfully stabilizes the customer into a Low Risk state!")
 
                               except Exception as e:
 
@@ -816,9 +816,9 @@ elif app_page == "🔮 What-If Simulator":
 
 
 
-elif app_page == "👥 Customer Analytics":
+elif app_page == "ðŸ‘¥ Customer Analytics":
 
-          st.title("👥 Customer Demographics & Analytics")
+          st.title("ðŸ‘¥ Customer Demographics & Analytics")
 
           c1, c2, c3 = st.columns(3)
 
@@ -848,9 +848,9 @@ elif app_page == "👥 Customer Analytics":
 
 
 
-elif app_page == "📉 Churn Analysis & Drivers":
+elif app_page == "ðŸ“‰ Churn Analysis & Drivers":
 
-          st.title("📉 Churn Analysis & Risk Drivers")
+          st.title("ðŸ“‰ Churn Analysis & Risk Drivers")
 
           pay_churn = df.groupby(['payment_method', 'churn']).size().reset_index(name='count')
 
@@ -862,9 +862,9 @@ elif app_page == "📉 Churn Analysis & Drivers":
 
 
 
-elif app_page == "💰 Revenue Intelligence":
+elif app_page == "ðŸ’° Revenue Intelligence":
 
-          st.title("💰 Revenue Intelligence & Financial Risk")
+          st.title("ðŸ’° Revenue Intelligence & Financial Risk")
 
           total_rev = df['total_charges'].sum()
 
@@ -878,9 +878,9 @@ elif app_page == "💰 Revenue Intelligence":
 
 
 
-elif app_page == "💡 Retention Insights":
+elif app_page == "ðŸ’¡ Retention Insights":
 
-          st.title("💡 Business Retention Intelligence & Recommendations")
+          st.title("ðŸ’¡ Business Retention Intelligence & Recommendations")
 
           st.markdown("1. **Contract Migration Campaigns:** Target month-to-month users approaching their 6th month.")
 
@@ -888,9 +888,9 @@ elif app_page == "💡 Retention Insights":
 
 
 
-elif app_page == "🤖 ML Model Performance":
+elif app_page == "ðŸ¤– ML Model Performance":
 
-          st.title("🤖 Machine Learning Model Evaluation")
+          st.title("ðŸ¤– Machine Learning Model Evaluation")
 
           m_col1, m_col2, m_col3 = st.columns(3)
 
@@ -906,9 +906,9 @@ elif app_page == "🤖 ML Model Performance":
 
 
 
-elif app_page == "📁 Customer Data Explorer":
+elif app_page == "ðŸ“ Customer Data Explorer":
 
-          st.title("📁 Customer Explorer & Telemetry Inspector")
+          st.title("ðŸ“ Customer Explorer & Telemetry Inspector")
 
           search_query = st.text_input("Search by Customer ID", "")
 
@@ -928,9 +928,9 @@ elif app_page == "📁 Customer Data Explorer":
 
 
 
-elif app_page == "⚙️ Data Quality & SQL Inspector":
+elif app_page == "âš™ï¸ Data Quality & SQL Inspector":
 
-          st.title("⚙️ Data Quality & Advanced SQL Query Inspector")
+          st.title("âš™ï¸ Data Quality & Advanced SQL Query Inspector")
 
           dq1, dq2, dq3, dq4 = st.columns(4)
 
@@ -944,13 +944,13 @@ elif app_page == "⚙️ Data Quality & SQL Inspector":
 
 
 
-elif app_page == "ℹ️ About the Project":
+elif app_page == "â„¹ï¸ About the Project":
 
-          st.title("ℹ️ About Customer Churn Intelligence")
+          st.title("â„¹ï¸ About Customer Churn Intelligence")
 
           st.markdown("""
 
-          ### 🎯 Project Overview
+          ### ðŸŽ¯ Project Overview
 
           **Customer Churn Intelligence** is an end-to-end data analytics and machine learning platform designed to audit, query, visualize, and predict telecom customer retention.
 
@@ -969,6 +969,7 @@ elif app_page == "ℹ️ About the Project":
 st.markdown("---")
 
 st.markdown("<p style='text-align: center; color: #6b7280;'>Customer Churn Intelligence Platform | Built with Python, SQL & AI</p>", unsafe_allow_html=True)
+
 
 
 
