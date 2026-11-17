@@ -224,21 +224,91 @@ def load_database():
 
 
 @st.cache_resource
-def load_ml_assets():
-    """Load trained model assets when they are present; analytics still work without them."""
+def load_ml_assets(data):
+    """Load existing model or train a new churn model automatically."""
     try:
+        from sklearn.ensemble import RandomForestClassifier
+        from sklearn.preprocessing import LabelEncoder
+
         if MODEL_PATH.is_file() and ENCODERS_PATH.is_file():
-            trained_model = joblib.load(MODEL_PATH)
-            trained_encoders = joblib.load(ENCODERS_PATH)
-            return trained_model, trained_encoders
+            return joblib.load(MODEL_PATH), joblib.load(ENCODERS_PATH)
+
+        if data is None or data.empty:
+            st.warning("ML model unavailable: customer dataset is empty.")
+            return None, None
+
+        st.info("Training the customer churn prediction model...")
+
+        train_df = data.copy()
+
+        feature_columns = [
+            "contract",
+            "tenure",
+            "monthly_charges",
+            "total_charges",
+            "internet_service",
+            "payment_method"
+        ]
+
+        categorical_columns = [
+            "contract",
+            "internet_service",
+            "payment_method"
+        ]
+
+        target = (
+            train_df["churn"].astype(str).str.strip().str.lower()
+            .map({"yes": 1, "no": 0, "1": 1, "0": 0,
+                  "true": 1, "false": 0})
+        )
+
+        train_df = train_df.loc[target.notna()].copy()
+        target = target.loc[target.notna()].astype(int)
+
+        encoders = {}
+
+        for col in categorical_columns:
+            train_df[col] = train_df[col].astype(str).str.strip()
+            encoder = LabelEncoder()
+            train_df[col] = encoder.fit_transform(train_df[col])
+            encoders[col] = encoder
+
+        for col in ["tenure", "monthly_charges", "total_charges"]:
+            train_df[col] = pd.to_numeric(
+                train_df[col], errors="coerce"
+            ).fillna(0)
+
+        X = train_df[feature_columns]
+
+        trained_model = RandomForestClassifier(
+            n_estimators=200,
+            max_depth=12,
+            min_samples_split=5,
+            class_weight="balanced",
+            random_state=42,
+            n_jobs=-1
+        )
+
+        trained_model.fit(X, target)
+
+        MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+        ENCODERS_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+        joblib.dump(trained_model, MODEL_PATH)
+        joblib.dump(encoders, ENCODERS_PATH)
+
+        st.success("Churn prediction model trained successfully.")
+
+        return trained_model, encoders
+
     except Exception as error:
-        st.warning(f"Trained model could not be loaded: {error}")
-    return None, None
+        st.error(f"ML model initialization failed: {error}")
+        return None, None
 
 
 df_global = load_database()
 
-model, encoders = load_ml_assets()
+model, encoders = load_ml_assets(df_global)
 
 
 
