@@ -1,4 +1,4 @@
-﻿import sqlite3
+import sqlite3
 
 import pandas as pd
 
@@ -264,33 +264,33 @@ st.sidebar.markdown("---")
 
 app_page = st.sidebar.radio(
 
-          "Navigation Workspace",
+          "Executive Overview",
 
           [
 
-                    "ðŸ“Š Executive Overview",
+                    "Customer 360 Intelligence",
 
-                    "ðŸ” Customer 360Â° Intelligence",
+                    "Customer Risk Matrix",
 
-                    "ðŸŽ¯ Customer Risk Matrix",
+                    "Explainable AI (XAI)",
 
-                    "ðŸ”¬ Explainable AI (XAI)",
+                    "What-If Simulator",
 
-                    "ðŸ”® What-If Simulator",
+                    "Customer Analytics",
 
-                    "ðŸ‘¥ Customer Analytics",
+                    "Churn Analysis & Drivers",
 
-                    "ðŸ“‰ Churn Analysis & Drivers",
+                    "Revenue Intelligence",
 
-                    "ðŸ’° Revenue Intelligence",
+                    "Retention Insights",
 
-                    "ðŸ’¡ Retention Insights",
+                    "ML Model Performance",
 
-                    "ðŸ¤– ML Model Performance",
+                    "Customer Data Explorer",
 
-                    "ðŸ“ Customer Data Explorer",
+                    "Data Quality & SQL Inspector",
 
-                    "âš™ï¸ Data Quality & SQL Inspector",
+                    "About the Project",
 
                     "â„¹ï¸ About the Project"
 
@@ -302,7 +302,7 @@ app_page = st.sidebar.radio(
 
 st.sidebar.markdown("---")
 
-st.sidebar.markdown("### ðŸŽ›ï¸ Global Data Filters")
+st.sidebar.markdown("### Global Data Filters")
 
 
 
@@ -364,7 +364,7 @@ df = df_global[
 
 if app_page == "ðŸ“Š Executive Overview":
 
-          st.title("ðŸ“Š Executive Overview Dashboard")
+          st.title("Executive Overview Dashboard")
 
           st.markdown("Real-time telemetry monitoring customer retention, subscription risk exposure, and billing analytics.")
 
@@ -458,7 +458,7 @@ if app_page == "ðŸ“Š Executive Overview":
 
 elif app_page == "ðŸ” Customer 360Â° Intelligence":
 
-          st.title("ðŸ” Customer 360Â° â€” Complete Customer Intelligence")
+          st.title("Customer 360 - Complete Customer Intelligence")
 
           st.markdown("Search a specific Customer ID to inspect comprehensive behavioral telemetry, ML risk scoring, and tailored retention recommendations.")
 
@@ -586,7 +586,7 @@ elif app_page == "ðŸ” Customer 360Â° Intelligence":
 
 elif app_page == "ðŸŽ¯ Customer Risk Matrix":
 
-          st.title("ðŸŽ¯ Advanced Customer Risk Intelligence Matrix")
+          st.title("Advanced Customer Risk Intelligence Matrix")
 
           matrix_df = df.copy()
 
@@ -666,7 +666,7 @@ elif app_page == "ðŸŽ¯ Customer Risk Matrix":
 
 elif app_page == "ðŸ”¬ Explainable AI (XAI)":
 
-          st.title("ðŸ”¬ Explainable AI â€” Feature Contribution & Risk Analysis")
+          st.title("Explainable AI - Feature Contribution & Risk Analysis")
 
           st.markdown("Inspect how the trained Random Forest model weighs feature importance to evaluate customer attrition probability.")
 
@@ -740,7 +740,7 @@ elif app_page == "ðŸ”¬ Explainable AI (XAI)":
 
 elif app_page == "ðŸ”® What-If Simulator":
 
-          st.title("ðŸ”® Customer Churn Scenario Simulator (What-If Analysis)")
+          st.title("Customer Churn Scenario Simulator (What-If Analysis)")
 
           st.markdown("Modify customer telemetry parameters to simulate hypothetical retention outcomes without altering source data.")
 
@@ -818,7 +818,7 @@ elif app_page == "ðŸ”® What-If Simulator":
 
 elif app_page == "ðŸ‘¥ Customer Analytics":
 
-          st.title("ðŸ‘¥ Customer Demographics & Analytics")
+          st.title("Customer Demographics & Analytics")
 
           c1, c2, c3 = st.columns(3)
 
@@ -850,7 +850,7 @@ elif app_page == "ðŸ‘¥ Customer Analytics":
 
 elif app_page == "ðŸ“‰ Churn Analysis & Drivers":
 
-          st.title("ðŸ“‰ Churn Analysis & Risk Drivers")
+          st.title("Churn Analysis & Risk Drivers")
 
           pay_churn = df.groupby(['payment_method', 'churn']).size().reset_index(name='count')
 
@@ -864,7 +864,7 @@ elif app_page == "ðŸ“‰ Churn Analysis & Drivers":
 
 elif app_page == "ðŸ’° Revenue Intelligence":
 
-          st.title("ðŸ’° Revenue Intelligence & Financial Risk")
+          st.title("Revenue Intelligence & Financial Risk")
 
           total_rev = df['total_charges'].sum()
 
@@ -880,7 +880,7 @@ elif app_page == "ðŸ’° Revenue Intelligence":
 
 elif app_page == "ðŸ’¡ Retention Insights":
 
-          st.title("ðŸ’¡ Business Retention Intelligence & Recommendations")
+          st.title("Business Retention Intelligence & Recommendations")
 
           st.markdown("1. **Contract Migration Campaigns:** Target month-to-month users approaching their 6th month.")
 
@@ -890,7 +890,7 @@ elif app_page == "ðŸ’¡ Retention Insights":
 
 elif app_page == "ðŸ¤– ML Model Performance":
 
-          st.title("ðŸ¤– Machine Learning Model Evaluation")
+          st.title("Machine Learning Model Evaluation")
 
           m_col1, m_col2, m_col3 = st.columns(3)
 
@@ -908,7 +908,7 @@ elif app_page == "ðŸ¤– ML Model Performance":
 
 elif app_page == "ðŸ“ Customer Data Explorer":
 
-          st.title("ðŸ“ Customer Explorer & Telemetry Inspector")
+          st.title("Customer Explorer & Data Inspector")
 
           search_query = st.text_input("Search by Customer ID", "")
 
@@ -930,7 +930,7 @@ elif app_page == "ðŸ“ Customer Data Explorer":
 
 elif app_page == "âš™ï¸ Data Quality & SQL Inspector":
 
-          st.title("âš™ï¸ Data Quality & Advanced SQL Query Inspector")
+          st.title("Data Quality & SQL Query Inspector")
 
           dq1, dq2, dq3, dq4 = st.columns(4)
 
@@ -946,7 +946,7 @@ elif app_page == "âš™ï¸ Data Quality & SQL Inspector":
 
 elif app_page == "â„¹ï¸ About the Project":
 
-          st.title("â„¹ï¸ About Customer Churn Intelligence")
+          st.title("About Customer Churn Intelligence")
 
           st.markdown("""
 
