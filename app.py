@@ -263,42 +263,23 @@ st.sidebar.markdown("---")
 
 
 app_page = st.sidebar.radio(
-
-          "Executive Overview",
-
-          [
-
-                    "Customer 360 Intelligence",
-
-                    "Customer Risk Matrix",
-
-                    "Explainable AI (XAI)",
-
-                    "What-If Simulator",
-
-                    "Customer Analytics",
-
-                    "Churn Analysis & Drivers",
-
-                    "Revenue Intelligence",
-
-                    "Retention Insights",
-
-                    "ML Model Performance",
-
-                    "Customer Data Explorer",
-
-                    "Data Quality & SQL Inspector",
-
-                    "About the Project",
-
-                    "â„¹ï¸ About the Project"
-
-          ]
-
+    "Navigation Workspace",
+    [
+        "Executive Overview",
+        "Customer 360 Intelligence",
+        "Customer Risk Matrix",
+        "Explainable AI (XAI)",
+        "What-If Simulator",
+        "Customer Analytics",
+        "Churn Analysis & Drivers",
+        "Revenue Intelligence",
+        "Retention Insights",
+        "ML Model Performance",
+        "Customer Data Explorer",
+        "Data Quality & SQL Inspector",
+        "About the Project"
+    ]
 )
-
-
 
 st.sidebar.markdown("---")
 
